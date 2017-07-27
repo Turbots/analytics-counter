@@ -1,0 +1,10 @@
+---
+memory: 768MB
+instances: 1
+env:
+  SPRING_PROFILES_ACTIVE : cloud
+applications:
+- name: jworks-techblog-analytics
+  path: target/analytics-counter-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+  timeout: 60
